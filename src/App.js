@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import axios from 'axios'
+import VideCon from './components/VideCon';
+
+const url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDgPsA4ggpzF8BMStL3Lj7g9VHVi8DjTFg&part=snippet&publishedAfter=2020-09-10T00:00:00Z&q=search&maxResults=15&type=video&hl=en_US&q=javascript -basics &order=date&relevanceLanguage=en`;
+
 
 function App() {
+
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setData(res.data)
+    })
+
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <VideCon data={data} />
     </div>
   );
 }
