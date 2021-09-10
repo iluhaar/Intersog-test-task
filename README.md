@@ -1,4 +1,4 @@
-# Test task for R&N Engineer
+# Test task for R&N Engineer Intersog
 
 ### Условия:
     1. Список должен состоять из названия и даты публикации каждого видео
