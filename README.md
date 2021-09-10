@@ -11,5 +11,9 @@
     7. Формат и внешний вид списка произвольный
 
 #### clone repo 
-#### yarn/npm install
-#### yarn/npm start
+##### yarn/npm install
+##### yarn/npm start
+
+
+### Or check by link
+    [https://intersog-test-task-iluhaar.netlify.app/](https://intersog-test-task-iluhaar.netlify.app/)
